@@ -1,0 +1,125 @@
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1E90FF, #C6A7E6);
+  background-size: 300% 300%;
+  animation: gradientBackground 5s ease infinite;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+button {
+  margin: 20px;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #2196F3;
+  color: white;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stopwatch {
+  text-align: center;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e0e0e0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.stopwatch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.circle {
+  border: 5px solid #ff5722;
+  border-radius: 50%;
+  padding: 40px;
+  margin-bottom: 25px;
+}
+
+.time-display {
+  font-size: 3.5em;
+  color: #212121;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.time-display span {
+  display: inline-block;
+  min-width: 60px;
+}
+
+.buttons {
+  position: relative;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#startPauseButton { background-color: #FF5722; color: white; }
+#resetButton { background-color: #F44336; color: white; }
+#lapButton { background-color: #2196F3; color: white; }
+#closeButton {
+  background-color: #9E9E9E;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 0.8em;
+}
+
+.buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lap-times {
+  margin-top: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.lap-times li {
+  list-style: none;
+  font-size: 1.1em;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  margin: 5px 0;
+  border-radius: 5px;
+}
